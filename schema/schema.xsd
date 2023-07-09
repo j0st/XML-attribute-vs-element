@@ -1,0 +1,260 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://www.w3schools.com"
+xmlns="https://www.w3schools.com"
+elementFormDefault="qualified">
+
+<xs:simpleType name="Positive_decimal"> <!-- es gibt keinen vordefinierten Datentypen für positive Dezimalzahlen, deswegen habe ich selbst einen definiert-->
+    <xs:restriction base="xs:decimal">
+     <xs:pattern value="[0-9]\d*(\.\d+)?"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:element name="car_database">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="car" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Model" type="xs:string"/>
+            <xs:element name="MSRP_in_USD" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Gas_Mileage" type="xs:string" minOccurs="0"/>
+            <xs:element name="Engine" type="xs:string" minOccurs="0"/>
+            <xs:element name="EPA_Class" type="xs:string" minOccurs="0"/>
+            <xs:element name="Style_Name" type="xs:string" minOccurs="0"/>
+            <xs:element name="Drivetrain" type="xs:string" minOccurs="0"/>
+            <xs:element name="Passenger_Capacity" type="xs:nonNegativeInteger" minOccurs="0"/>
+            <xs:element name="Passenger_Doors" type="xs:nonNegativeInteger" minOccurs="0"/>
+            <xs:element name="Body_Style" type="xs:string" minOccurs="0"/>
+            <xs:element name="Transmission" type="xs:string" minOccurs="0"/>
+            <xs:element name="EPA_Classification" type="xs:string" minOccurs="0"/>
+            <xs:element name="Base_Curb_Weight_in_lbs" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Front_Hip_Room_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Front_Leg_Room_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Second_Shoulder_Room_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Passenger_Volume_in_cubic_feet" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Second_Head_Room_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Front_Shoulder_Room_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Second_Hip_Room_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Front_Head_Room_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Second_Leg_Room_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Wheelbase_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Min_Ground_Clearance_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Track_Width_Front_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Width_Max_without_mirrors_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Track_Width_Rear_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Height_Overall_in_inch" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Cargo_Volume_to_Seat_1_in_cubic_feet" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Volume_to_Seat_2_in_cubic_feet" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Volume_to_Seat_3_in_cubic_feet" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fuel_Tank_Capacity_approx_in_gal" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fuel_Economy_Est-Combined_MPG" type="xs:string" minOccurs="0"/>
+            <xs:element name="EPA_Fuel_Economy_Est_-_City_MPG" type="xs:string" minOccurs="0"/>
+            <xs:element name="EPA_Fuel_Economy_Est_-_Hwy_MPG" type="xs:string" minOccurs="0"/>
+            <xs:element name="Engine_Order_Code" type="xs:string" minOccurs="0"/>
+            <xs:element name="SAE_Net_Torque_RPM" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fuel_System" type="xs:string" minOccurs="0"/>
+            <xs:element name="Engine_Type" type="xs:string" minOccurs="0"/>
+            <xs:element name="SAE_Net_Horsepower_RPM" type="xs:string" minOccurs="0"/>
+            <xs:element name="Displacement" type="xs:string" minOccurs="0"/>
+            <xs:element name="First_Gear_Ratio_1" type="xs:string" minOccurs="0"/>
+            <xs:element name="Sixth_Gear_Ratio_1" type="xs:string" minOccurs="0"/>
+            <xs:element name="Trans_Description_Cont." type="xs:string" minOccurs="0"/>
+            <xs:element name="Fourth_Gear_Ratio_1" type="xs:string" minOccurs="0"/>
+            <xs:element name="Seventh_Gear_Ratio_1" type="xs:string" minOccurs="0"/>
+            <xs:element name="Trans_Order_Code" type="xs:string" minOccurs="0"/>
+            <xs:element name="Second_Gear_Ratio_1" type="xs:string" minOccurs="0"/>
+            <xs:element name="Reverse_Ratio_1" type="xs:string" minOccurs="0"/>
+            <xs:element name="Trans_Description_Cont._Again" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fifth_Gear_Ratio_1" type="xs:string" minOccurs="0"/>
+            <xs:element name="Eighth_Gear_Ratio_1" type="xs:string" minOccurs="0"/>
+            <xs:element name="Trans_Type" type="xs:string" minOccurs="0"/>
+            <xs:element name="Third_Gear_Ratio_1" type="xs:string" minOccurs="0"/>
+            <xs:element name="Final_Drive_Axle_Ratio_1" type="xs:string" minOccurs="0"/>
+            <xs:element name="Brake_Type" type="xs:string" minOccurs="0"/>
+            <xs:element name="Rear_Brake_Rotor_Diam_x_Thickness_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Disc_-_Rear_" type="xs:string" minOccurs="0"/>
+            <xs:element name="Brake_ABS_System" type="xs:string" minOccurs="0"/>
+            <xs:element name="Drum_-_Rear_" type="xs:string" minOccurs="0"/>
+            <xs:element name="Front_Brake_Rotor_Diam_x_Thickness_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Disc_-_Front_" type="xs:string" minOccurs="0"/>
+            <xs:element name="Rear_Drum_Diam_x_Width_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Steering_Type" type="xs:string" minOccurs="0"/>
+            <xs:element name="Turning_Diameter_-_Curb_to_Curb_in_feet" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Front_Tire_Order_Code" type="xs:string" minOccurs="0"/>
+            <xs:element name="Spare_Tire_Size" type="xs:string" minOccurs="0"/>
+            <xs:element name="Front_Tire_Size" type="xs:string" minOccurs="0"/>
+            <xs:element name="Rear_Tire_Order_Code" type="xs:string" minOccurs="0"/>
+            <xs:element name="Rear_Tire_Size" type="xs:string" minOccurs="0"/>
+            <xs:element name="Spare_Tire_Order_Code" type="xs:string" minOccurs="0"/>
+            <xs:element name="Front_Wheel_Size_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Spare_Wheel_Material" type="xs:string" minOccurs="0"/>
+            <xs:element name="Front_Wheel_Material" type="xs:string" minOccurs="0"/>
+            <xs:element name="Rear_Wheel_Size_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Rear_Wheel_Material" type="xs:string" minOccurs="0"/>
+            <xs:element name="Spare_Wheel_Size_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Suspension_Type_-_Front_" type="xs:string" minOccurs="0"/>
+            <xs:element name="Suspension_Type_-_Front" type="xs:string" minOccurs="0"/>
+            <xs:element name="Suspension_Type_-_Rear_" type="xs:string" minOccurs="0"/>
+            <xs:element name="Suspension_Type_-_Rear" type="xs:string" minOccurs="0"/>
+            <xs:element name="Air_Bag-Frontal-Driver" type="xs:string" minOccurs="0"/>
+            <xs:element name="Air_Bag-Frontal-Passenger" type="xs:string" minOccurs="0"/>
+            <xs:element name="Air_Bag-Passenger_Switch_" type="xs:string" minOccurs="0"/>
+            <xs:element name="Air_Bag-Side_Body-Front" type="xs:string" minOccurs="0"/>
+            <xs:element name="Air_Bag-Side_Body-Rear" type="xs:string" minOccurs="0"/>
+            <xs:element name="Air_Bag-Side_Head-Front" type="xs:string" minOccurs="0"/>
+            <xs:element name="Air_Bag-Side_Head-Rear" type="xs:string" minOccurs="0"/>
+            <xs:element name="Brakes-ABS" type="xs:string" minOccurs="0"/>
+            <xs:element name="Child_Safety_Rear_Door_Locks" type="xs:string" minOccurs="0"/>
+            <xs:element name="Daytime_Running_Lights" type="xs:string" minOccurs="0"/>
+            <xs:element name="Traction_Control" type="xs:string" minOccurs="0"/>
+            <xs:element name="Night_Vision" type="xs:string" minOccurs="0"/>
+            <xs:element name="Rollover_Protection_Bars" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fog_Lamps" type="xs:string" minOccurs="0"/>
+            <xs:element name="Parking_Aid" type="xs:string" minOccurs="0"/>
+            <xs:element name="Tire_Pressure_Monitor" type="xs:string" minOccurs="0"/>
+            <xs:element name="Back-Up_Camera" type="xs:string" minOccurs="0"/>
+            <xs:element name="Stability_Control" type="xs:string" minOccurs="0"/>
+            <xs:element name="Other_Features" type="xs:string" minOccurs="0"/>
+            <xs:element name="Basic_Miles_per_km" type="xs:string" minOccurs="0"/>
+            <xs:element name="Basic_Years" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Corrosion_Miles_per_km" type="xs:string" minOccurs="0"/>
+            <xs:element name="Corrosion_Years" type="Positive_decimal" minOccurs="0"/>
+            <xs:element name="Drivetrain_Years" type="xs:string" minOccurs="0"/>
+            <xs:element name="Drivetrain_Miles_per_km" type="xs:string" minOccurs="0"/>
+            <xs:element name="Roadside_Assistance_Miles_per_km" type="xs:string" minOccurs="0"/>
+            <xs:element name="Roadside_Assistance_Years" type="xs:string" minOccurs="0"/>
+            <xs:element name="Maximum_Alternator_Capacity_" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cold_Cranking_Amps" type="xs:string" minOccurs="0"/>
+            <xs:element name="Wt_Distributing_Hitch_-_Max_Tongue_Wt._in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Dead_Weight_Hitch_-_Max_Tongue_Wt._in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Maximum_Trailering_Capacity_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Wt_Distributing_Hitch_-_Max_Trailer_Wt._in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Dead_Weight_Hitch_-_Max_Trailer_Wt._in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Liftover_Height_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Rear_Door_Opening_Height_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Rear_Door_Opening_Width_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Length_Overall_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Box_Width_Wheelhousings_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Area_Length_Floor_to_Seat_3_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Area_Length_Floor_to_Seat_1_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Box_Area_Height_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Area_Width_Beltline_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Area_Length_Floor_to_Seat_2_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Clutch_Size_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Turning_Diameter_-_Wall_to_Wall_in_feet" type="xs:string" minOccurs="0"/>
+            <xs:element name="Lock_to_Lock_Turns_Steering" type="xs:string" minOccurs="0"/>
+            <xs:element name="Steering_Ratio_1_Overall" type="xs:string" minOccurs="0"/>
+            <xs:element name="Shock_Absorber_Diameter_-_Front_in_mm" type="xs:string" minOccurs="0"/>
+            <xs:element name="Stabilizer_Bar_Diameter_-_Rear_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Shock_Absorber_Diameter_-_Rear_in_mm" type="xs:string" minOccurs="0"/>
+            <xs:element name="Stabilizer_Bar_Diameter_-_Front_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Total_Cooling_System_Capacity_in_qts" type="xs:string" minOccurs="0"/>
+            <xs:element name="Third_Shoulder_Room_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Third_Head_Room_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Third_Hip_Room_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Third_Leg_Room_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Hybrid_Electric_Components_Miles_per_km" type="xs:string" minOccurs="0"/>
+            <xs:element name="Hybrid_Electric_Components_Years" type="xs:string" minOccurs="0"/>
+            <xs:element name="Transfer_Case_Gear_Ratio_1_High" type="xs:string" minOccurs="0"/>
+            <xs:element name="Transfer_Case_Gear_Ratio_1_Low" type="xs:string" minOccurs="0"/>
+            <xs:element name="Trunk_Volume_in_cubic_feet" type="xs:string" minOccurs="0"/>
+            <xs:element name="Number_of_Passenger_Doors" type="xs:string" minOccurs="0"/>
+            <xs:element name="Roadside_Assistance_Note" type="xs:string" minOccurs="0"/>
+            <xs:element name="Warranty_Note" type="xs:string" minOccurs="0"/>
+            <xs:element name="Maintenance_Miles_per_km" type="xs:string" minOccurs="0"/>
+            <xs:element name="Maintenance_Years" type="xs:string" minOccurs="0"/>
+            <xs:element name="Basic_Note" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Volume_with_Rear_Seat_Up_in_cubic_feet" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Volume_with_Rear_Seat_Down_in_cubic_feet" type="xs:string" minOccurs="0"/>
+            <xs:element name="Gross_Vehicle_Weight_Rating_Cap_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Engine_Oil_Cooler" type="xs:string" minOccurs="0"/>
+            <xs:element name="Transfer_Case_Model" type="xs:string" minOccurs="0"/>
+            <xs:element name="Transfer_Case_Power_Take_Off" type="xs:string" minOccurs="0"/>
+            <xs:element name="Trans_PTO_Access" type="xs:string" minOccurs="0"/>
+            <xs:element name="Brake_ABS_System_Second_Line" type="xs:string" minOccurs="0"/>
+            <xs:element name="Axle_Type_-_Rear" type="xs:string" minOccurs="0"/>
+            <xs:element name="Axle_Type_-_Front" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cold_Cranking_Amps_0_F_2nd" type="xs:string" minOccurs="0"/>
+            <xs:element name="EPA_MPG_Equivalent_-_Combined" type="xs:string" minOccurs="0"/>
+            <xs:element name="Battery_Range_in_mi" type="xs:string" minOccurs="0"/>
+            <xs:element name="Axle_Ratio_1_-_Rear" type="xs:string" minOccurs="0"/>
+            <xs:element name="Axle_Ratio_1_-_Front" type="xs:string" minOccurs="0"/>
+            <xs:element name="Gross_Axle_Wt_Rating_-_Front_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Gross_Axle_Wt_Rating_-_Rear_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="EPA_MPG_Equivalent_-_City" type="xs:string" minOccurs="0"/>
+            <xs:element name="EPA_MPG_Equivalent_-_Hwy" type="xs:string" minOccurs="0"/>
+            <xs:element name="Maintenance_Note" type="xs:string" minOccurs="0"/>
+            <xs:element name="Emissions_Miles_per_km" type="xs:string" minOccurs="0"/>
+            <xs:element name="Emissions_Years" type="xs:string" minOccurs="0"/>
+            <xs:element name="Ninth_Gear_Ratio_1" type="xs:string" minOccurs="0"/>
+            <xs:element name="EPA_Air_Pollution_Score" type="xs:string" minOccurs="0"/>
+            <xs:element name="Rear_Door_Type" type="xs:string" minOccurs="0"/>
+            <xs:element name="Curb_Weight_-_Front_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Gross_Combined_Wt_Rating_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Curb_Weight_-_Rear_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Ground_Clearance_Rear_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Step_Up_Height_-_Front_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Length_Overall_with_rear_bumper_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Ground_to_Top_of_Load_Floor_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Side_Door_Opening_Height_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Overhang_Front_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Step_Up_Height_-_Side_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Ground_Clearance_Front_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Side_Door_Opening_Width_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Overhang_Rear_with_bumper_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Volume_to_Seat_4_in_cubic_feet" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Area_Length_Floor_to_Seat_4_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Area_Length_Floor_to_Console_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Aux_Fuel_Tank_Capacity_approx_in_gal" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fuel_Tank_Location" type="xs:string" minOccurs="0"/>
+            <xs:element name="Aux_Fuel_Tank_Location" type="xs:string" minOccurs="0"/>
+            <xs:element name="Trans_Power_Take_Off" type="xs:string" minOccurs="0"/>
+            <xs:element name="Tenth_Gear_Ratio_1" type="xs:string" minOccurs="0"/>
+            <xs:element name="Steering_Ratio_1_On_Center" type="xs:string" minOccurs="0"/>
+            <xs:element name="Steering_Ratio_1_At_Lock" type="xs:string" minOccurs="0"/>
+            <xs:element name="Spare_Tire_Capacity_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Front_Tire_Capacity_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Revolutions_per_Mile_at_45_mph_Spare" type="xs:string" minOccurs="0"/>
+            <xs:element name="Revolutions_per_Mile_at_45_mph_-_Front" type="xs:string" minOccurs="0"/>
+            <xs:element name="Rear_Tire_Capacity_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Revolutions_per_Mile_at_45_mph_-_Rear" type="xs:string" minOccurs="0"/>
+            <xs:element name="Axle_Capacity_-_Front_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Axle_Capacity_-_Rear_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Spring_Capacity_-_Front_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Spring_Capacity_-_Rear_in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Maximum_Alternator_Watts" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fifth_Wheel_Hitch_-_Max_Trailer_Wt._in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fifth_Wheel_Hitch_-_Max_Tongue_Wt._in_lbs" type="xs:string" minOccurs="0"/>
+            <xs:element name="Length_Overall_without_rear_bumper_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Front_Bumper_to_Back_of_Cab_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Frame_Width_Rear_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cab_to_Axle_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Overhang_Rear_without_bumper_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Ground_to_Top_of_Frame_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cab_to_End_of_Frame_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Box_Width_at_Top_Rear_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Volume_in_cubic_feet" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Box_Width_at_Floor_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Extd_Cab_Cargo_Volume_in_cubic_feet" type="xs:string" minOccurs="0"/>
+            <xs:element name="Cargo_Box_Length_at_Floor_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Tailgate_Width_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Drivetrain_Note" type="xs:string" minOccurs="0"/>
+            <xs:element name="Emissions_Note" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fourth_Hip_Room_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fourth_Leg_Room_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fourth_Shoulder_Room_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fourth_Head_Room_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fifth_Shoulder_Room_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fifth_Head_Room_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fifth_Hip_Room_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fifth_Leg_Room_in_inch" type="xs:string" minOccurs="0"/>
+            <xs:element name="Corrosion_Note" type="xs:string" minOccurs="0"/>
+            <xs:element name="Hybrid_Electric_Components_Note" type="xs:string" minOccurs="0"/>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

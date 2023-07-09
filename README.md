@@ -24,7 +24,7 @@ Scraped car data was taken from [this repo](https://github.com/nicolas-gervais/p
 
 
 ## Results
-![image](https://github.com/j0st/XML-attribute-vs-element/assets/73901378/8d7a77d0-7bcd-40f1-b45b-4321b4c07b7a)
+![XPath expression](https://github.com/j0st/XML-attribute-vs-element/blob/main/img.png)
 
 The table shows one of the more complex XPath expression (relative and absolute) evaluated in this project. The test results clearly indicate that the runtime of XPath queries on a XML database with values encapsulated only in attributes, rather than elements, is the shortest, representing the more efficient structure. In most cases, these two structures differ mainly in evaluation time, and printing the results also tends to be faster.
 
